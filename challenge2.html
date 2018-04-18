@@ -15,12 +15,12 @@
         username: 'tylermcginnis'
       }
 
-      function Badge () {
+      function Badge ({user}) {
         return (
           <div>
-            <img src={''} />
-            <h1>Name: </h1>
-            <h3>username: </h3>
+            <img src={user.img} />
+            <h1>Name:{user.name} </h1>
+            <h3>username:{user.username} </h3>
           </div>
         ) 
       }
