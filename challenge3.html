@@ -9,24 +9,24 @@
   <body>
     <div id='app'></div>
     <script type='text/babel'>
-      function Avatar() {
-        return <img src={''} />
+      function Avatar({img}) {
+        return <img src={img} />
       }
 
-      function Label() {
-        return <h1>Name: </h1>
+      function Label({name}) {
+        return <h1>Name:{name} </h1>
       }
 
-      function ScreenName() {
-        return <h3>Username: </h3>
+      function ScreenName({username}) {
+        return <h3>Username:{username} </h3>
       }
 
-      function Badge() {
+      function Badge({user}) {
         return (
           <div>
-            <Avatar />
-            <Label />
-            <ScreenName />
+            <Avatar img={user.img} />
+            <Label name={user.name}/>
+            <ScreenName username={user.username}/>
           </div>
         )
       }
